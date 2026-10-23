@@ -133,6 +133,7 @@ pub enum ChatLanguage {
     RU,
     SV,
     TR,
+    ZHHK,
     ZHTW,
     UK,
 }
@@ -153,6 +154,7 @@ impl Display for ChatLanguage {
             ChatLanguage::RU => write!(f, "ru"),
             ChatLanguage::SV => write!(f, "sv"),
             ChatLanguage::TR => write!(f, "tr"),
+            ChatLanguage::ZHHK => write!(f, "zh_hk"),
             ChatLanguage::ZHTW => write!(f, "zh_tw"),
             ChatLanguage::UK => write!(f, "uk"),
         }
@@ -179,6 +181,7 @@ impl std::str::FromStr for ChatLanguage {
             "ru" => Ok(ChatLanguage::RU),
             "sv" => Ok(ChatLanguage::SV),
             "tr" => Ok(ChatLanguage::TR),
+            "zh_hk" => Ok(ChatLanguage::ZHHK),
             "zh_tw" => Ok(ChatLanguage::ZHTW),
             "uk" => Ok(ChatLanguage::UK),
             _ => Err(error::Error::LangNotSupported),
